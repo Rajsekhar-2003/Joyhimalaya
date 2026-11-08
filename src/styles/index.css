@@ -1,0 +1,18 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+@layer base {
+  body { @apply bg-snow font-sans text-charcoal antialiased; }
+  h1,h2,h3,h4 { @apply font-display tracking-tight; }
+  :focus-visible { @apply outline outline-2 outline-offset-2 outline-forest-500; }
+}
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition disabled:opacity-50; }
+  .btn-primary { @apply btn bg-forest-700 text-white hover:bg-forest-800; }
+  .btn-light { @apply btn bg-white text-forest-800 hover:bg-forest-50; }
+  .btn-ghost { @apply btn border border-stone-300 bg-white hover:bg-stone-50; }
+  .btn-danger { @apply btn bg-red-600 text-white hover:bg-red-700; }
+  .input { @apply w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-sm focus:border-forest-500; }
+  .label { @apply mb-1 block text-sm font-semibold; }
+  .err { @apply mt-1 text-xs text-red-600; }
+  .wrap { @apply mx-auto w-full max-w-6xl px-4 sm:px-6; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
